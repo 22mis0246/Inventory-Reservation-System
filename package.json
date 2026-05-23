@@ -12,6 +12,7 @@
     "db:push": "prisma db push",
     "db:seed": "prisma db seed",
     "db:setup": "prisma migrate deploy && prisma db seed",
+    "test:race": "tsx scripts/race-reserve.ts",
     "postinstall": "prisma generate"
   },
   "prisma": {

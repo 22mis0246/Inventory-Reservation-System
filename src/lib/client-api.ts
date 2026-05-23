@@ -43,3 +43,34 @@ export async function createReservation(input: {
   );
   return data.reservation;
 }
+
+export async function fetchReservation(
+  id: string,
+): Promise<ReservationDto> {
+  const data = await parseResponse<{ reservation: ReservationDto }>(
+    await fetch(`/api/reservations/${id}`, { cache: "no-store" }),
+  );
+  return data.reservation;
+}
+
+export async function confirmReservationApi(
+  id: string,
+): Promise<ReservationDto> {
+  const data = await parseResponse<{ reservation: ReservationDto }>(
+    await fetch(`/api/reservations/${id}/confirm`, { method: "POST" }),
+  );
+  return data.reservation;
+}
+
+export async function releaseReservationApi(
+  id: string,
+): Promise<ReservationDto | null> {
+  const res = await fetch(`/api/reservations/${id}/release`, {
+    method: "POST",
+  });
+  const data = await res.json();
+  if (!res.ok) {
+    throw new ApiClientError(res.status, data as ApiErrorBody);
+  }
+  return (data as { reservation?: ReservationDto }).reservation ?? null;
+}

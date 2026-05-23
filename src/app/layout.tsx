@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { AppProviders } from "@/components/providers/AppProviders";
 import "./globals.css";
@@ -45,9 +46,12 @@ export default function RootLayout({
                 </p>
               </div>
             </div>
-            <span className="hidden rounded-full border border-hold-ink/15 px-3 py-1 font-mono text-xs text-hold-muted sm:inline">
-              Allo take-home
-            </span>
+            <Link
+              href="/"
+              className="hidden rounded-full border border-hold-ink/15 px-3 py-1 font-mono text-xs text-hold-muted transition hover:border-hold-accent hover:text-hold-accent sm:inline"
+            >
+              Shelf
+            </Link>
           </div>
         </header>
         <main className="mx-auto max-w-5xl px-4 py-8">

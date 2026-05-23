@@ -1,13 +1,10 @@
-/** Placeholder — full hold ticket UI in Stage 8 */
-export default async function CheckoutPlaceholder({
+import { HoldTicketCheckout } from "@/components/HoldTicketCheckout";
+
+export default async function CheckoutPage({
   params,
 }: {
   params: Promise<{ reservationId: string }>;
 }) {
   const { reservationId } = await params;
-  return (
-    <p className="font-mono text-sm text-hold-muted">
-      Hold ticket for {reservationId} — Stage 8 next
-    </p>
-  );
+  return <HoldTicketCheckout reservationId={reservationId} />;
 }
