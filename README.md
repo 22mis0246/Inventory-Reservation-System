@@ -15,7 +15,7 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-000000?style=for-the-badge&logoColor=white)](https://hold-desk.vercel.app)
+[![Live Demo](https://inventory-reservation-system-nine.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
@@ -155,7 +155,40 @@ Idempotency-Key: <uuid>   // recommended for payment flows
 ---
 
 ### `POST /api/reservations/:id/release`
+                                                        IMPORTANT NOTE
 Immediately releases a `PENDING` reservation and restores held inventory.
+Cron-based expiry (implemented)
+
+Originally implemented using:
+
+Vercel cron job
+/api/cron/release-expired
+
+The cron endpoint automatically released expired reservations every minute.
+
+> Why cron is disabled in production
+
+The deployed project currently uses the Vercel ##Hobby plan, which has limitations around cron scheduling for this setup.
+
+To keep deployment simple and stable, the project currently relies on lazy cleanup.
+
+Lazy Cleanup (currently active)
+Expired reservations are automatically cleaned whenever users interact with the application.
+
+Cleanup runs during:
+
+GET /api/products
+GET /api/reservations/:id
+reservation confirmation flow
+
+This means:
+expired holds still release correctly
+inventory returns automatically
+no manual cleanup is required
+
+Difference:
+cleanup occurs during user activity
+not on a fixed background schedule
 
 ---
 
