@@ -26,9 +26,9 @@
 </div>
                             CLICK TO VIEW - https://inventory-reservation-system-nine.vercel.app/
 <img width="1901" height="941" alt="image" src="https://github.com/user-attachments/assets/2d6c4049-e633-4356-8ef3-d62fd26cb2e8" />
+<img width="1466" height="842" alt="image" src="https://github.com/user-attachments/assets/74b1a913-d983-4360-bd3b-f35ad49455fd" />
 
 ---
-
 ## ⚡ The Problem
 
 Every e-commerce system eventually faces this cliff:
