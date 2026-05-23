@@ -18,6 +18,6 @@ export function assertCronAuthorized(request: Request): void {
   const expected = `Bearer ${secret}`;
 
   if (auth !== expected) {
-    throw new AppError("INTERNAL_ERROR", "Unauthorized", 401);
+    throw new AppError("UNAUTHORIZED", "Unauthorized", 401);
   }
 }

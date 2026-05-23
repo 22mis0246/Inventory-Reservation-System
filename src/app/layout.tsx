@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { AppProviders } from "@/components/providers/AppProviders";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -49,7 +50,9 @@ export default function RootLayout({
             </span>
           </div>
         </header>
-        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <main className="mx-auto max-w-5xl px-4 py-8">
+          <AppProviders>{children}</AppProviders>
+        </main>
       </body>
     </html>
   );

@@ -5,7 +5,9 @@ export type AppErrorCode =
   | "RESERVATION_NOT_PENDING"
   | "INVALID_QUANTITY"
   | "PRODUCT_NOT_FOUND"
-  | "WAREHOUSE_NOT_FOUND";
+  | "WAREHOUSE_NOT_FOUND"
+  | "UNAUTHORIZED"
+  | "INTERNAL_ERROR";
 
 export class AppError extends Error {
   constructor(
