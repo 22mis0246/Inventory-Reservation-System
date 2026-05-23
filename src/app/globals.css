@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --hold-paper: #faf8f4;
+  --hold-ink: #1a1814;
+  --hold-accent: #c45c26;
+  --hold-mint: #2d6a4f;
+  --hold-warn: #bc6c25;
+  --hold-danger: #9b2226;
+  --hold-muted: #6b6560;
+  --lane-blr: #457b9d;
+  --lane-del: #e76f51;
+  --lane-bom: #2a9d8f;
+}
+
+@theme inline {
+  --color-hold-paper: var(--hold-paper);
+  --color-hold-ink: var(--hold-ink);
+  --color-hold-accent: var(--hold-accent);
+  --color-hold-mint: var(--hold-mint);
+  --color-hold-warn: var(--hold-warn);
+  --color-hold-danger: var(--hold-danger);
+  --color-hold-muted: var(--hold-muted);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains);
+}
+
+body {
+  background: var(--hold-paper);
+  color: var(--hold-ink);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
