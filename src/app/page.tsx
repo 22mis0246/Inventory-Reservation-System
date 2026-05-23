@@ -3,7 +3,7 @@ export default function HomePage() {
     <section className="space-y-6">
       <div className="space-y-2">
         <p className="font-mono text-xs uppercase tracking-widest text-hold-accent">
-          Stage 1 · Scaffold
+          Stage 2 · Data model ready
         </p>
         <h1 className="text-3xl font-semibold tracking-tight">
           Multi-warehouse shelf holds
