@@ -3,7 +3,7 @@ export default function HomePage() {
     <section className="space-y-6">
       <div className="space-y-2">
         <p className="font-mono text-xs uppercase tracking-widest text-hold-accent">
-          Stage 5 · API live
+          Stage 6 · Auto-expiry wired
         </p>
         <h1 className="text-3xl font-semibold tracking-tight">
           Multi-warehouse shelf holds
@@ -15,7 +15,7 @@ export default function HomePage() {
         </p>
       </div>
       <div className="rounded-lg border border-dashed border-hold-ink/20 bg-white/50 p-8 text-center text-sm text-hold-muted">
-        Try GET /api/products · POST /api/reservations. Shelf UI in Stage 7.
+        Cron releases expired holds every minute. Shelf UI in Stage 7.
       </div>
     </section>
   );
