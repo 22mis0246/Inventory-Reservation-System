@@ -3,7 +3,7 @@ export default function HomePage() {
     <section className="space-y-6">
       <div className="space-y-2">
         <p className="font-mono text-xs uppercase tracking-widest text-hold-accent">
-          Stage 2 · Data model ready
+          Stage 3 · Database seeded (after db:setup)
         </p>
         <h1 className="text-3xl font-semibold tracking-tight">
           Multi-warehouse shelf holds
@@ -15,7 +15,9 @@ export default function HomePage() {
         </p>
       </div>
       <div className="rounded-lg border border-dashed border-hold-ink/20 bg-white/50 p-8 text-center text-sm text-hold-muted">
-        Shelf view wiring in Stage 7
+        Run <code className="font-mono text-hold-ink">npm run db:setup</code> once
+        with Neon URLs in <code className="font-mono text-hold-ink">.env</code>.
+        Shelf UI in Stage 7.
       </div>
     </section>
   );
