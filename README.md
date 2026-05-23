@@ -15,7 +15,6 @@
 
 <br/>
 
-[![Live Demo](https://inventory-reservation-system-nine.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
@@ -25,6 +24,8 @@
 <br/>
 
 </div>
+                            CLICK TO VIEW - https://inventory-reservation-system-nine.vercel.app/
+<img width="1901" height="941" alt="image" src="https://github.com/user-attachments/assets/2d6c4049-e633-4356-8ef3-d62fd26cb2e8" />
 
 ---
 
