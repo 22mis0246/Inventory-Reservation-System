@@ -6,10 +6,10 @@ type Variant = "primary" | "ghost" | "lane";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-hold-accent text-white hover:bg-hold-accent/90 disabled:opacity-50",
+    "bg-hold-accent text-white hover:bg-hold-accent/90 disabled:opacity-50 disabled:cursor-not-allowed",
   ghost:
-    "border border-hold-ink/15 bg-white/80 hover:bg-white disabled:opacity-50",
-  lane: "bg-hold-ink text-white hover:bg-hold-ink/90 disabled:opacity-40",
+    "border border-hold-ink/15 bg-white/80 hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed",
+  lane: "bg-hold-ink text-white hover:bg-hold-ink/90 disabled:opacity-40 disabled:cursor-not-allowed",
 };
 
 export function Button({
@@ -20,7 +20,7 @@ export function Button({
   return (
     <button
       type="button"
-      className={`inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-medium transition ${variants[variant]} ${className}`}
+      className={`inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-medium transition cursor-pointer ${variants[variant]} ${className}`}
       {...props}
     />
   );

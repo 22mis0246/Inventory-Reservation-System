@@ -42,8 +42,31 @@ export function ProductShelf() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="h-40 animate-pulse rounded-xl bg-hold-ink/5"
-            />
+              className="flex gap-4 rounded-xl border border-hold-ink/10 bg-white/70 p-4 animate-pulse"
+            >
+              {/* Product image */}
+              <div className="h-36 w-36 shrink-0 rounded-lg bg-hold-ink/10" />
+
+              {/* Right side */}
+              <div className="flex-1 space-y-3">
+                {/* SKU + title */}
+                <div className="h-3 w-20 rounded bg-hold-ink/10" />
+                <div className="h-5 w-48 rounded bg-hold-ink/10" />
+                <div className="h-3 w-32 rounded bg-hold-ink/10" />
+
+                {/* 3 lane cards */}
+                <div className="mt-2 grid grid-cols-3 gap-3">
+                  {[1, 2, 3].map((j) => (
+                    <div key={j} className="space-y-2 rounded-md border border-hold-ink/10 bg-white/50 p-3">
+                      <div className="h-3 w-16 rounded bg-hold-ink/10" />
+                      <div className="h-2 w-full rounded-full bg-hold-ink/10" />
+                      <div className="h-3 w-24 rounded bg-hold-ink/10" />
+                      <div className="h-7 w-full rounded-md bg-hold-ink/10" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       ) : null}
